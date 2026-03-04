@@ -1,0 +1,208 @@
+/*===== VARIABLES CSS =====*/
+:root {
+  /*===== Font weight =====*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /*===== Colors =====*/
+  --first-color: #4A90E2; /* Sky blue color matching the image */
+  --second-color: #e5e7eb; /* Abu-abu terang untuk kontras */
+  --text-color: #0f1111;
+  --logo-blue: #357ABD; /* Slightly darker blue for accents */
+  --white: #ffffff;
+
+  /*===== Font and typography =====*/
+  --body-font: 'Poppins', sans-serif;
+
+  /*===== z index =====*/
+  --z-fixed: 100;
+}
+
+/* button default */
+.button {
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: var(--first-color);
+  border-radius: 30px;
+  border: 1px solid var(--white);
+  transition: all 200ms ease;
+}
+
+.button a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.button a:hover {
+  color: var(--white);
+}
+/* end button */
+/* Start Dropdown Filtering */
+.btn-secondary {
+  padding: 0 30px !important;
+  background-color: var(--first-color) !important;
+  border: none !important;
+  border-radius: 30px !important;
+  color: var(--white) !important;
+  transition: all 200ms ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--logo-blue) !important;
+  transform: translateY(-1px);
+}
+/* End Dropdown Filtering  */
+/* Start form */
+.form {
+  width: 600px;
+  height: 400px;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 20px;
+  background-color: rgba(30, 58, 138, 0.1);
+  border: 1px solid var(--second-color);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.title-form {
+  font-size: 20px;
+  padding-top: 10px;
+  color: var(--first-color);
+  font-weight: var(--font-bold);
+}
+
+.input-form {
+  border-radius: 30px;
+  border: 1px solid var(--second-color);
+  padding: 5px 20px;
+  width: 80%;
+  display: block;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  transition: all 200ms ease;
+}
+
+.input-form:focus {
+  border-color: var(--first-color);
+  box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.2);
+}
+
+input:focus {
+  outline: var(--first-color) solid 2px;
+}
+
+.button-submit {
+  display: inline-block;
+  border: 1px solid var(--white);
+  background-color: var(--first-color);
+  padding: 5px 20px;
+  border-radius: 30px;
+  color: var(--white);
+  font-weight: bolder;
+  float: right;
+  clear: right;
+  margin-right: 50px;
+  transition: all 200ms ease;
+}
+/* end form */
+/* start-card */
+.explore-items {
+  margin: 32px auto auto;
+  text-align: left;
+  width: 1000px;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.explore-item {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+  border: 1px solid var(--second-color);
+}
+
+.explore-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.15);
+  border-color: var(--first-color);
+}
+
+.explore-item .a {
+  text-decoration: none;
+  color: unset;
+}
+
+.explore-item__thumbnail {
+  width: 100%;
+}
+
+.explore-item__content {
+  padding: 16px 16px 32px 16px;
+  text-align: left;
+}
+
+.explore-item__title {
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 16px;
+  transition: 0.3s opacity;
+}
+
+.explore-item__description {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.explore-item__content-title {
+  text-align: center;
+  line-height: 1.6;
+}
+
+.explore-item__ratings {
+  text-align: center;
+}
+.img-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  max-height: 600px;
+}
+
+.img-container img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.explore-item__rating {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--white);
+  font-size: large;
+  border-radius: 0 0 20px 0;
+  background-color: var(--first-color);
+  padding: 0.4em 1.3em;
+  z-index: 1;
+}
+
+.explore-item__rating .fa {
+  font-size: smaller;
+  padding: 0.3em 0.8em 0.3em 0;
+  color: var(--white);
+}
+/* end card */

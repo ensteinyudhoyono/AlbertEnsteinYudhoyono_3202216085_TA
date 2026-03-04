@@ -1,0 +1,256 @@
+/*===== VARIABLES CSS =====*/
+:root {
+    /*===== Font weight =====*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    /*===== Colors =====*/
+    --first-color: #4A90E2; /* Sky blue color matching the image */
+    --second-color: #e5e7eb; /* Abu-abu terang untuk kontras */
+    --hover-color: #357ABD; /* Slightly darker blue for hover */
+    --text-color: #0f1111;
+    --logo-blue: #357ABD; /* Slightly darker blue for accents */
+    --white: #ffffff;
+    
+    /*===== New colors based on the image =====*/
+    --sidebar-blue: #87CEEB; /* Light blue (cyan-like) for sidebar */
+    --sidebar-hover: #5F9EA0; /* Darker cyan for sidebar hover */
+    --footer-gray: #f8f9fa; /* Light gray for footer */
+    --footer-text: #6c757d; /* Darker gray for footer text */
+
+    /*===== Font and typography =====*/
+    --body-font: "Poppins", sans-serif;
+
+    /*===== z index =====*/
+    --z-fixed: 100;
+}
+
+.button {
+    background-color: var(--first-color) !important;
+    border: transparent !important;
+    transition: all 200ms ease;
+}
+
+.button:hover {
+    background-color: var(--logo-blue) !important;
+    transform: translateY(-1px);
+}
+
+.invalid-feedback {
+    display: unset !important;
+    color: #dc3545;
+    font-size: 0.875em;
+    margin-top: 0.25rem;
+}
+
+/* Start Sidebar */
+.sidebar {
+    background-color: var(--sidebar-blue);
+    box-shadow: 2px 0 4px -1px rgba(0, 0, 0, 0.1);
+    border-radius: 0 15px 15px 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    height: 96vh;
+}
+
+.nav-link {
+    padding: 50px 25px;
+    color: var(--white) !important;
+    font-size: 22px;
+    transition: all 200ms ease;
+    font-weight: var(--font-medium);
+}
+
+.nav-item:nth-child(1) {
+    margin-top: 100px;
+}
+
+.nav-item {
+    min-height: 100px;
+    width: 100%;
+    background-color: var(--sidebar-blue);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    transition: all 200ms ease;
+    border-radius: 0 15px 15px 0;
+}
+
+.nav-item:hover {
+    background-color: var(--sidebar-hover);
+}
+
+.sidebar-active {
+    background-color: var(--sidebar-hover);
+    border-left: 4px solid var(--white);
+}
+
+/* Hover effect for sidebar items */
+.nav-item:hover .nav-link {
+    color: var(--white) !important;
+}
+/* end Sidebar */
+
+/* Start Footer */
+.footer {
+    background-color: var(--footer-gray);
+    color: var(--footer-text);
+    padding: 20px 0;
+    border-top: 1px solid #dee2e6;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: var(--z-fixed);
+}
+
+.footer strong span {
+    color: var(--first-color);
+    font-weight: var(--font-bold);
+}
+/* End Footer */
+
+/* Start main-Content */
+.content-title {
+    margin: 100px 0 0 40px;
+    color: var(--first-color);
+    font-weight: var(--font-bold);
+    border-bottom: 3px solid var(--first-color);
+    padding-bottom: 10px;
+}
+
+/* Add margin bottom to prevent content from being hidden by fixed footer */
+.sidebar-container {
+    margin-bottom: 80px;
+}
+
+main {
+    min-height: calc(100vh - 80px);
+}
+
+.filter-tgl {
+    border-radius: 30px;
+    border: 2px solid var(--first-color);
+    padding: 3px 5px;
+    transition: all 200ms ease;
+}
+
+.filter-tgl:focus {
+    outline: none;
+    border-color: var(--logo-blue);
+    box-shadow: 0 0 0 2px rgba(30, 64, 175, 0.2);
+}
+
+.detail-explore__info li {
+    list-style: none;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--second-color);
+}
+
+.detail-explore__info li:last-child {
+    border-bottom: none;
+}
+
+/* Email validation styles */
+.is-loading {
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20"%3e%3cg fill="none"%3e%3cpath fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill="%23007bff"/%3e%3c/g%3e%3c/svg%3e');
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    padding-right: 2.5rem;
+}
+
+.is-valid {
+    border-color: #198754 !important;
+    box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25) !important;
+}
+
+.is-invalid {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25) !important;
+}
+
+.valid-feedback {
+    display: block;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    color: #198754;
+}
+
+.invalid-feedback {
+    display: block;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    color: #dc3545;
+}
+
+/* Loading spinner for email validation */
+.email-loading {
+    position: relative;
+}
+
+.email-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translateY(-50%) rotate(0deg); }
+    100% { transform: translateY(-50%) rotate(360deg); }
+}
+
+/* Loading state for modals */
+.modal-body.loading {
+    position: relative;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.modal-body.loading::before {
+    content: "Memuat data...";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 9999;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* DataTable helpers */
+.dt-center { text-align: center; }
+.dt-left { text-align: left; }
+.dt-nowrap { white-space: nowrap; }
+.dt-ellipsis {
+  max-width: 280px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 992px) {
+  .dt-ellipsis { max-width: 200px; }
+}
+
+@media (max-width: 576px) {
+  .dt-ellipsis { max-width: 140px; }
+}
